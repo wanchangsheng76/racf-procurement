@@ -1,0 +1,59 @@
+﻿# RACF: Reputation-Aware Coalition Formation
+
+Code and data for "Endogenous Reputation and Coalition Formation in Decentralized Procurement"
+
+## Data
+
+The BOAMP public procurement dataset is publicly available at:
+DOI: 10.5281/zenodo.11001277 (Deschamps et al. 2025)
+
+Download BeauAMP_full.csv (1.4 GB) and place it in this directory.
+
+## Code Structure
+
+- model.py — Core model: supplier, order, coalition classes
+- acf_stages.py — RACF three-stage mechanism implementation
+- experiments.py — Main computational experiments
+- experiments_multicycle.py — Multi-cycle feedback loop experiments
+- generate_figures.py — Figure generation
+- config.py — Parameter configuration
+- enchmarks.py — Benchmark implementations
+- nalysis.py — Statistical analysis and significance testing
+- equirements.txt — Python dependencies
+
+## Reproducibility
+
+`
+pip install -r requirements.txt
+python experiments.py          # Main benchmark runs
+python experiments_multicycle.py  # Multi-cycle feedback experiments
+python generate_figures.py     # Generate all figures
+`
+"@ | Set-Content "README.md" -Encoding utf8
+
+@"
+# Large data files from BOAMP (download separately)
+BeauAMP_full.csv
+BeauAMP_2015_2023.csv
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Results
+results/
+*.json
+*.png
+*.txt
+
+# LaTeX/PDF
+*.pdf
+*.eps
+*.tex
+*.cls
+*.bst
+*.bib
+*.sty
+
+# Git
+.git/
